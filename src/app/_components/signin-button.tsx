@@ -82,9 +82,9 @@ export const SigninButton: FC<SigninButtonProps> = ({ className, ...rest }) => {
         {isLoading ? (
           <Loader size={18} className="my-px animate-spin ease-in-out" />
         ) : isSignedIn ? (
-          'Use another Unwallet →'
+          'Use another InWallet →'
         ) : (
-          'Use an existing Unwallet →'
+          'Use an existing InWallet →'
         )}
       </button>
       <PasskeyDialogOverlay open={isSigning} />

@@ -10,11 +10,6 @@ export default function getChainIconUrl(chain: Chain) {
     case chains.arbitrumNova.id:
     case chains.arbitrumSepolia.id:
       return '/chain-icons/arbitrum.jpg'
-    case chains.polygonMumbai.id:
-    case chains.polygon.id:
-    case chains.polygonZkEvm.id:
-    case chains.polygonZkEvmTestnet.id:
-      return '/chain-icons/polygon.png'
     case chains.optimism.id:
     case chains.optimismSepolia.id:
       return '/chain-icons/optimism.jpg'

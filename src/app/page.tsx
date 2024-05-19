@@ -11,14 +11,6 @@ export default function HomePage() {
     <>
       <main className="mt-10 flex grow flex-col items-center justify-center">
         <div className="flex grow flex-col items-center justify-center gap-10 hxl:gap-14">
-          {/* Announcement Link */}
-          <a
-            href="https://twitter.com/unwallet_me/status/1737874854953783299"
-            target="_blank"
-            className="-mb-5 mt-5 block rounded-full bg-primary px-2.5 py-1 text-xs font-medium text-white ring-2 ring-primary ring-offset-2"
-          >
-            Read the announcement →
-          </a>
 
           {/* Title & Description */}
           <div className="flex max-w-prose flex-col gap-2 text-center">
@@ -40,7 +32,7 @@ export default function HomePage() {
                 shimmerSize="0.1em"
               >
                 <span className="whitespace-pre-wrap px-1 text-center text-base font-medium leading-none tracking-tight text-brand dark:from-white dark:to-slate-900/10">
-                  Get Unwalleted
+                  Get InWalleted
                 </span>
               </ShimmerButton>
 
@@ -58,7 +50,7 @@ export default function HomePage() {
           <div className="-ml-12 h-[300px] overflow-hidden sm:h-[350px] md:h-[400px] hlg:!h-auto hlg:!overflow-auto">
             <Image
               src={phoneImg}
-              alt="Unwallet App Screenshot"
+              alt="InWallet App Screenshot"
               width={450}
               className="select-none"
               priority
@@ -69,7 +61,7 @@ export default function HomePage() {
             <li>🔑&nbsp;&nbsp;No seedphrases</li>
             <li>📬&nbsp;&nbsp;No wallet address</li>
             <li>🧬&nbsp;&nbsp;Passkey signing</li>
-            <li>👛&nbsp;&nbsp;Fee- and gas-less</li>
+            <li>👛&nbsp;&nbsp;Gasless & efficient</li>
           </ul>
         </div>
       </main>

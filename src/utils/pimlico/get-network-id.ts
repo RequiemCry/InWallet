@@ -3,7 +3,6 @@ import { Chain } from 'viem'
 export const getPimlicoNetworkId = (chain: Chain) => {
   const network = {
     '43113': 'avalanche-fuji',
-    '80001': 'mumbai',
     '10200': 'chiado-testnet',
     '11155420': 'optimism-sepolia',
     '84532': 'base-sepolia',

@@ -12,8 +12,8 @@ export const ONBOARDING_STEPS: OnboardingStep[] = [
   },
   {
     id: '2',
-    title: 'Create Unwallet',
-    shortTitle: 'Create Unwallet',
+    title: 'Create InWallet',
+    shortTitle: 'Create InWallet',
     description: 'Deploying smart wallet only using on-device biometrics.',
     component: CreateUnwalletStep,
   },

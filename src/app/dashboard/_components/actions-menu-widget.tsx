@@ -24,7 +24,7 @@ const MenuAction: FC<MenuActionProps> = ({ title, icon: Icon }) => {
   return (
     <Button
       type="button"
-      onClick={() => toast('Coming soon ser! 🚀')}
+      onClick={() => toast('Coming soon! 🚀')}
       className="group h-auto rounded-lg border bg-card py-4 shadow-sm hover:bg-gray-900"
       variant="secondary"
     >

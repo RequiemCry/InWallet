@@ -7,7 +7,7 @@ export const SendWidgetAction = () => {
   return (
     <Button
       type="button"
-      onClick={() => toast('Coming soon ser! 🚀')}
+      onClick={() => toast('Coming soon! 🚀')}
       variant="brand"
       className="ring-offset-gray-900"
     >

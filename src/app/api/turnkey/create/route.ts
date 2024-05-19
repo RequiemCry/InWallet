@@ -46,7 +46,7 @@ export async function POST(req: Request) {
           },
         ],
         wallet: {
-          walletName: `Unwallet Signer`,
+          walletName: `InWallet Signer`,
           accounts: [
             {
               curve: 'CURVE_SECP256K1',

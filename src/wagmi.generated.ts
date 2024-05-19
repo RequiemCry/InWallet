@@ -2536,7 +2536,6 @@ export const simpleAccountFactoryConfig = {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /**
- * - [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0xa116EFd55BaF84803471Db9E267F26f707FF8eF8)
  * - [__View Contract on Base Sepolia Blockscout__](https://base-sepolia.blockscout.com/address/0x2B332c1aF30a50E6901460Cd74149e2358105e5e)
  * - [__View Contract on Optimism Sepolia Blockscout__](https://optimism-sepolia.blockscout.com/address/0x745f416b9c8883fdD8869e652b3Ea29dbD3ec7bc)
  */
@@ -2822,18 +2821,15 @@ export const xcEnsRegistryAbi = [
 ] as const
 
 /**
- * - [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0xa116EFd55BaF84803471Db9E267F26f707FF8eF8)
  * - [__View Contract on Base Sepolia Blockscout__](https://base-sepolia.blockscout.com/address/0x2B332c1aF30a50E6901460Cd74149e2358105e5e)
  * - [__View Contract on Optimism Sepolia Blockscout__](https://optimism-sepolia.blockscout.com/address/0x745f416b9c8883fdD8869e652b3Ea29dbD3ec7bc)
  */
 export const xcEnsRegistryAddress = {
-  80001: '0xa116EFd55BaF84803471Db9E267F26f707FF8eF8',
   84532: '0x2B332c1aF30a50E6901460Cd74149e2358105e5e',
   11155420: '0x745f416b9c8883fdD8869e652b3Ea29dbD3ec7bc',
 } as const
 
 /**
- * - [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0xa116EFd55BaF84803471Db9E267F26f707FF8eF8)
  * - [__View Contract on Base Sepolia Blockscout__](https://base-sepolia.blockscout.com/address/0x2B332c1aF30a50E6901460Cd74149e2358105e5e)
  * - [__View Contract on Optimism Sepolia Blockscout__](https://optimism-sepolia.blockscout.com/address/0x745f416b9c8883fdD8869e652b3Ea29dbD3ec7bc)
  */
@@ -2847,7 +2843,6 @@ export const xcEnsRegistryConfig = {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /**
- * - [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x2cDE4d09AFAd2299ae93Fee5777C8222eC90ba0b)
  * - [__View Contract on Base Sepolia Blockscout__](https://base-sepolia.blockscout.com/address/0xe2F91CE5c578BC92a1c56633a27D260a8688F512)
  * - [__View Contract on Optimism Sepolia Blockscout__](https://optimism-sepolia.blockscout.com/address/0xdf0586C41617Db9886b54E36c649B0D2980F330c)
  */
@@ -2952,18 +2947,15 @@ export const xcFifsRegistrarAbi = [
 ] as const
 
 /**
- * - [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x2cDE4d09AFAd2299ae93Fee5777C8222eC90ba0b)
  * - [__View Contract on Base Sepolia Blockscout__](https://base-sepolia.blockscout.com/address/0xe2F91CE5c578BC92a1c56633a27D260a8688F512)
  * - [__View Contract on Optimism Sepolia Blockscout__](https://optimism-sepolia.blockscout.com/address/0xdf0586C41617Db9886b54E36c649B0D2980F330c)
  */
 export const xcFifsRegistrarAddress = {
-  80001: '0x2cDE4d09AFAd2299ae93Fee5777C8222eC90ba0b',
   84532: '0xe2F91CE5c578BC92a1c56633a27D260a8688F512',
   11155420: '0xdf0586C41617Db9886b54E36c649B0D2980F330c',
 } as const
 
 /**
- * - [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x2cDE4d09AFAd2299ae93Fee5777C8222eC90ba0b)
  * - [__View Contract on Base Sepolia Blockscout__](https://base-sepolia.blockscout.com/address/0xe2F91CE5c578BC92a1c56633a27D260a8688F512)
  * - [__View Contract on Optimism Sepolia Blockscout__](https://optimism-sepolia.blockscout.com/address/0xdf0586C41617Db9886b54E36c649B0D2980F330c)
  */
@@ -2977,7 +2969,6 @@ export const xcFifsRegistrarConfig = {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /**
- * - [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x942Dfc5F5f34875C9f8607152F7a3Ac3A08289b4)
  * - [__View Contract on Base Sepolia Blockscout__](https://base-sepolia.blockscout.com/address/0xABb8dc1c09dE4d47Ef50fe53d4c9D74A809f8212)
  * - [__View Contract on Optimism Sepolia Blockscout__](https://optimism-sepolia.blockscout.com/address/0x0FD959Da5d59a3a651485647adaF2Bf893904716)
  */
@@ -3143,18 +3134,15 @@ export const xcPublicResolverAbi = [
 ] as const
 
 /**
- * - [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x942Dfc5F5f34875C9f8607152F7a3Ac3A08289b4)
  * - [__View Contract on Base Sepolia Blockscout__](https://base-sepolia.blockscout.com/address/0xABb8dc1c09dE4d47Ef50fe53d4c9D74A809f8212)
  * - [__View Contract on Optimism Sepolia Blockscout__](https://optimism-sepolia.blockscout.com/address/0x0FD959Da5d59a3a651485647adaF2Bf893904716)
  */
 export const xcPublicResolverAddress = {
-  80001: '0x942Dfc5F5f34875C9f8607152F7a3Ac3A08289b4',
   84532: '0xABb8dc1c09dE4d47Ef50fe53d4c9D74A809f8212',
   11155420: '0x0FD959Da5d59a3a651485647adaF2Bf893904716',
 } as const
 
 /**
- * - [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x942Dfc5F5f34875C9f8607152F7a3Ac3A08289b4)
  * - [__View Contract on Base Sepolia Blockscout__](https://base-sepolia.blockscout.com/address/0xABb8dc1c09dE4d47Ef50fe53d4c9D74A809f8212)
  * - [__View Contract on Optimism Sepolia Blockscout__](https://optimism-sepolia.blockscout.com/address/0x0FD959Da5d59a3a651485647adaF2Bf893904716)
  */
@@ -3168,7 +3156,6 @@ export const xcPublicResolverConfig = {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /**
- * - [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0xB2B23667d15449043155344FFCDDB247e49D5F0c)
  * - [__View Contract on Base Sepolia Blockscout__](https://base-sepolia.blockscout.com/address/0x4f1807F6a0321790E5d4a262f9127ce17797405A)
  * - [__View Contract on Optimism Sepolia Blockscout__](https://optimism-sepolia.blockscout.com/address/0x75Fc08b42bCBB59eE9b81d282C1Ab59a5471264f)
  */
@@ -3324,18 +3311,15 @@ export const xcReverseRegistrarAbi = [
 ] as const
 
 /**
- * - [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0xB2B23667d15449043155344FFCDDB247e49D5F0c)
  * - [__View Contract on Base Sepolia Blockscout__](https://base-sepolia.blockscout.com/address/0x4f1807F6a0321790E5d4a262f9127ce17797405A)
  * - [__View Contract on Optimism Sepolia Blockscout__](https://optimism-sepolia.blockscout.com/address/0x75Fc08b42bCBB59eE9b81d282C1Ab59a5471264f)
  */
 export const xcReverseRegistrarAddress = {
-  80001: '0xB2B23667d15449043155344FFCDDB247e49D5F0c',
   84532: '0x4f1807F6a0321790E5d4a262f9127ce17797405A',
   11155420: '0x75Fc08b42bCBB59eE9b81d282C1Ab59a5471264f',
 } as const
 
 /**
- * - [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0xB2B23667d15449043155344FFCDDB247e49D5F0c)
  * - [__View Contract on Base Sepolia Blockscout__](https://base-sepolia.blockscout.com/address/0x4f1807F6a0321790E5d4a262f9127ce17797405A)
  * - [__View Contract on Optimism Sepolia Blockscout__](https://optimism-sepolia.blockscout.com/address/0x75Fc08b42bCBB59eE9b81d282C1Ab59a5471264f)
  */

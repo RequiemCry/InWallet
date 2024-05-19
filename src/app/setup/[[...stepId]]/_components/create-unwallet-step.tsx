@@ -18,7 +18,7 @@ import { BundlerClient, UserOperation, getSenderAddress } from 'permissionless'
 import { PimlicoPaymasterClient } from 'permissionless/clients/pimlico'
 import { toast } from 'sonner'
 import { Hex, LocalAccount, encodeFunctionData, labelhash, namehash } from 'viem'
-import { avalancheFuji, baseSepolia, optimismSepolia, polygonMumbai } from 'viem/chains'
+import { avalancheFuji, baseSepolia, optimismSepolia } from 'viem/chains'
 import { usePublicClient } from 'wagmi'
 
 import { domainContextAtom, turnkeyAuthContextAtom } from '@/app/atoms'
@@ -91,7 +91,7 @@ export default function CreateUnwalletStep(_: OnboardingStepComponentProps) {
   const determineCounterfactualAddresses = async (passkeyAccount: LocalAccount) => {
     if (!publicClient) return
 
-    const chains = [avalancheFuji, polygonMumbai, optimismSepolia, baseSepolia]
+    const chains = [avalancheFuji, optimismSepolia, baseSepolia]
     for (const chain of chains) {
       const initCode = generateInitCode(getFactoryAddress(chain)!, passkeyAccount.address)
       const bundlerClient = await getPimlicoBundlerClient(chain)
