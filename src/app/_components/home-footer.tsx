@@ -13,7 +13,7 @@ export default function HomeFooter({ className }: HtmlHTMLAttributes<HTMLDivElem
       )}
     >
       <a
-        href="https://github.com/RequiemCry"
+        href="https://github.com/Unwallet-constellation"
         target="_blank"
         className="outline-none hover:text-foreground focus:text-foreground"
       >
