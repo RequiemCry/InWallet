@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import { Link } from 'lucide-react';
 
 import { publicResolverCcipAbi, publicResolverCcipAddress } from '@/wagmi.generated'
 import { BookUser, Coins } from 'lucide-react'
@@ -23,7 +24,7 @@ interface ChainDetailsHoverCardProps {
 }
 export const ChainDetailsHoverCard: FC<ChainDetailsHoverCardProps> = (props) => {
   return (
-    <HoverCard openDelay={0} closeDelay={0}>
+    <HoverCard openDelay={0} closeDelay={50}>
       <HoverCardTrigger>
         <button
           type="button"
@@ -57,6 +58,8 @@ export const ChainDetailsHoverCard: FC<ChainDetailsHoverCardProps> = (props) => 
   )
 }
 
+let address: string | undefined = undefined;
+
 const DomainChainResolvedAddress: FC<ChainDetailsHoverCardProps> = ({ chain, domainContext }) => {
   // Resolve address via ENSIP-11
   const { domain } = domainContext
@@ -67,6 +70,8 @@ const DomainChainResolvedAddress: FC<ChainDetailsHoverCardProps> = ({ chain, dom
     functionName: 'addr',
     args: [namehash(domain), BigInt(convertEVMChainIdToCoinType(chain.id))],
   })
+
+  address = query.data;
 
   return (
     <div className="flex flex-col gap-1.5">
@@ -87,14 +92,36 @@ const DomainChainResolvedAddress: FC<ChainDetailsHoverCardProps> = ({ chain, dom
 }
 
 const DomainChainFetchedBalance: FC<ChainDetailsHoverCardProps> = ({ chain, domainContext }) => {
-  const balances = useDomainMultichainBalances(domainContext, [chain], false)
-  const balancesWithPrices = useChainlinkPriceFeeds(balances || [])
+  const balances = useDomainMultichainBalances(domainContext, [chain], false);
+  const balancesWithPrices = useChainlinkPriceFeeds(balances || []);
+
+  const getExplorerUrl = (chain: number, address: string | undefined) => {
+    switch (chain) {
+      case 43113:
+        return `https://testnet.snowtrace.io/address/${address}`;
+      case 84532:
+        return `https://base-sepolia.blockscout.com/address/${address}`;
+      case 11155420:
+        return `https://optimism-sepolia.blockscout.com/address/${address}`;
+    }
+  };
+  
+  const explorerUrl = getExplorerUrl(chain.id, address);
 
   return (
     <div className="flex flex-col gap-1.5">
-      <div className="flex items-center gap-1.5">
-        <Coins size={14} />
-        <h5 className="text-sm font-medium">Fetched Balance</h5>
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-1.5">
+          <Coins size={14} />
+          <h5 className="text-sm font-medium">Fetched Balance</h5>
+        </div>
+        <button
+          onClick={() => window.open(explorerUrl, '_blank')}
+          className="flex items-center justify-center p-2 rounded hover:bg-gray-200"
+          aria-label="Open in Explorer"
+        >
+          <Link size={14} />
+        </button>
       </div>
       <div className="h-[13.5px] font-mono text-xs text-muted-foreground">
         {!!balances?.length && (
@@ -112,5 +139,5 @@ const DomainChainFetchedBalance: FC<ChainDetailsHoverCardProps> = ({ chain, doma
           )}
       </div>
     </div>
-  )
-}
+  );
+};
