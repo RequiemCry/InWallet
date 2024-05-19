@@ -13,11 +13,11 @@ export default function HomeFooter({ className }: HtmlHTMLAttributes<HTMLDivElem
       )}
     >
       <a
-        href="https://github.com/Unwallet-constellation"
+        href="https://github.com/RequiemCry"
         target="_blank"
         className="outline-none hover:text-foreground focus:text-foreground"
       >
-        Project for Diploma at "KROK" 2024
+        Project for Diploma at &quot;KROK&quot; 2024
       </a>
       <SignoutButton className="outline-none hover:text-foreground focus:text-foreground" />
     </footer>
