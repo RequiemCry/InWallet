@@ -5,18 +5,23 @@ import { ethers } from 'ethers';
 import { env } from '@/config/environment';
 import { useAddress } from '@/app/address-context';
 
+function getRandomAmount(min: number, max: number, decimals: number): number {
+  const factor = Math.pow(10, decimals);
+  return Math.round((Math.random() * (max - min) + min) * factor) / factor;
+}
+
 const networks = {
   opSepolia: {
     url: `https://optimism-sepolia.infura.io/v3/${env.NEXT_PUBLIC_INFURA_API_KEY}`,
-    amount: ethers.utils.parseUnits('0.00001', 'ether')
+    amount: ethers.utils.parseUnits(getRandomAmount(0.0015, 0.0045, 4).toString(), 'ether')
   },
   baseSepolia: {
     url: `https://rpc.ankr.com/base_sepolia/${env.NEXT_PUBLIC_ANKR_API_KEY}`,
-    amount: ethers.utils.parseUnits('0.00001', 'ether')
+    amount: ethers.utils.parseUnits(getRandomAmount(0.0015, 0.0045, 4).toString(), 'ether')
   },
   avaxFuji: {
     url: `https://avalanche-fuji.infura.io/v3/${env.NEXT_PUBLIC_INFURA_API_KEY}`,
-    amount: ethers.utils.parseUnits('0.00001', 'ether')
+    amount: ethers.utils.parseUnits(getRandomAmount(0.07, 0.17, 2).toString(), 'ether')
   }
 };
 
