@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 import { Link } from 'lucide-react';
 
 import { publicResolverCcipAbi, publicResolverCcipAddress } from '@/wagmi.generated'
@@ -17,6 +17,7 @@ import { convertEVMChainIdToCoinType } from '@/utils/coin-type'
 import { copyToClipboard } from '@/utils/copy-to-clipboard'
 
 import { useDomainMultichainBalances } from '../_hooks/use-domain-multichain-balances'
+import { useAddress } from '@/app/address-context';
 
 interface ChainDetailsHoverCardProps {
   chain: Chain
@@ -58,20 +59,22 @@ export const ChainDetailsHoverCard: FC<ChainDetailsHoverCardProps> = (props) => 
   )
 }
 
-let address: string | undefined = undefined;
-
 const DomainChainResolvedAddress: FC<ChainDetailsHoverCardProps> = ({ chain, domainContext }) => {
-  // Resolve address via ENSIP-11
-  const { domain } = domainContext
+  const { address, setAddress } = useAddress(); // Используйте контекст здесь
+  const { domain } = domainContext;
   const query = useReadContract({
     chainId: avalancheFuji.id,
     address: publicResolverCcipAddress[avalancheFuji.id],
     abi: publicResolverCcipAbi,
     functionName: 'addr',
     args: [namehash(domain), BigInt(convertEVMChainIdToCoinType(chain.id))],
-  })
+  });
 
-  address = query.data;
+  useEffect(() => {
+    if (query.data) {
+      setAddress(query.data);
+    }
+  }, [query.data, setAddress]);
 
   return (
     <div className="flex flex-col gap-1.5">
@@ -88,10 +91,11 @@ const DomainChainResolvedAddress: FC<ChainDetailsHoverCardProps> = ({ chain, dom
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
 const DomainChainFetchedBalance: FC<ChainDetailsHoverCardProps> = ({ chain, domainContext }) => {
+  const { address } = useAddress();
   const balances = useDomainMultichainBalances(domainContext, [chain], false);
   const balancesWithPrices = useChainlinkPriceFeeds(balances || []);
 
@@ -105,7 +109,7 @@ const DomainChainFetchedBalance: FC<ChainDetailsHoverCardProps> = ({ chain, doma
         return `https://optimism-sepolia.blockscout.com/address/${address}`;
     }
   };
-  
+
   const explorerUrl = getExplorerUrl(chain.id, address);
 
   return (

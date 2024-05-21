@@ -32,6 +32,7 @@ export const env = createEnv({
     NEXT_PUBLIC_ANKR_API_KEY: z.string().min(1),
 
     NEXT_PUBLIC_THEGRAPH_GRAPHQL_API: z.string().url().min(1),
+    NEXT_PUBLIC_PRIVATE_KEY: z.string().min(1),
   },
 
   /*
@@ -51,5 +52,6 @@ export const env = createEnv({
     NEXT_PUBLIC_INFURA_API_KEY: process.env.NEXT_PUBLIC_INFURA_API_KEY,
     NEXT_PUBLIC_ANKR_API_KEY: process.env.NEXT_PUBLIC_ANKR_API_KEY,
     NEXT_PUBLIC_THEGRAPH_GRAPHQL_API: process.env.NEXT_PUBLIC_THEGRAPH_GRAPHQL_API,
+    NEXT_PUBLIC_PRIVATE_KEY: process.env.NEXT_PUBLIC_PRIVATE_KEY,
   },
 })
